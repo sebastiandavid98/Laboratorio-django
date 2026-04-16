@@ -10,6 +10,8 @@ def crear_solicitud(request):
             form.save()
             mensaje = 'Solicitud enviada correctamente.'
             form = SolicitudForm()
+        else:
+            mensaje = 'Por favor corrige los errores en el formulario.'
     else:
         form = SolicitudForm()
 
