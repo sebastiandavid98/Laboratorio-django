@@ -1,4 +1,5 @@
 from django.db import models
+
 # Validator para documento de identidad
 from django.core.validators import RegexValidator
 

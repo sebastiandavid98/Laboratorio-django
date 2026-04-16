@@ -19,7 +19,7 @@ class Migration(migrations.Migration):
                 ('nombre_solicitante', models.CharField(max_length=150, verbose_name='Nombre del solicitante')),
                 ('documento_identidad', models.CharField(max_length=50, validators=[django.core.validators.RegexValidator(message='El documento de identidad debe contener solo caracteres alfanuméricos.', regex='^[A-Za-z0-9]+$')], verbose_name='Documento de identidad')),
                 ('correo', models.EmailField(max_length=254, verbose_name='Correo electrónico')),
-                ('telefono', models.CharField(max_length=30, validators=[django.core.validators.RegexValidator(message='El teléfono solo puede contener dígitos, espacios, + y -.', regex='^[0-9+\\-\\s]+$')], verbose_name='Teléfono')),
+                ('telefono', models.BigIntegerField(verbose_name='Teléfono')),
                 ('tipo_solicitud', models.CharField(choices=[('ACADEMICA', 'Académica'), ('ADMINISTRATIVA', 'Administrativa'), ('TECNICA', 'Técnica'), ('OTRA', 'Otra')], max_length=20, verbose_name='Tipo de solicitud')),
                 ('asunto', models.CharField(max_length=200, verbose_name='Asunto')),
                 ('descripcion', models.TextField(verbose_name='Descripción')),

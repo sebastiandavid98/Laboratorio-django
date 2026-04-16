@@ -14,10 +14,9 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'main',
+
     'asistencia_app',
     'solicitudes',
-  dev
 ]
 
 MIDDLEWARE = [
@@ -79,10 +78,7 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 STATICFILES_DIRS = [BASE_DIR / 'static']
-
-# Media files (uploads)
 MEDIA_URL = '/media/'
-# If BASE_DIR is a pathlib.Path, use division to build the path
 MEDIA_ROOT = BASE_DIR / 'media'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
