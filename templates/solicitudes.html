@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario de Solicitud</title>
+</head>
+<body>
+    <h1>Formulario de Solicitud</h1>
+    <p>Completa los campos para enviar tu solicitud.</p>
+
+    {% if mensaje %}
+        <p style="color: green;"><strong>{{ mensaje }}</strong></p>
+    {% endif %}
+
+    <form method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Enviar solicitud</button>
+    </form>
+</body>
+</html>
